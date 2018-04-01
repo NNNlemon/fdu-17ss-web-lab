@@ -1,0 +1,129 @@
+html,body,figure,figcaption,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr, acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong, sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption, tbody,tfoot,thead,tr,th,td{border:0;outline:0;vertical-align:baseline; background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body{
+    background-color: #E8EAF6;
+    padding-right: 5%;
+    padding-left: 5%;
+    min-width: 600px;
+    font-family: sans-serif,serif;
+}
+section{
+    background-color: white;
+    border-color: #C5CAE9;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 0.5em;
+}
+article{
+    background-color: white;
+    border-width: 0.5em;
+    border-color: white;
+    border-style: solid;
+}
+header{
+    background-color: #1A237E;
+    color: white;
+    padding: 1em;
+}
+header #Title{
+    font-size: 1.5em;
+}
+header #Subtitle{
+    padding-top: 0.3em;
+    font-style: italic;
+    font-family: "Times New Roman","serif";
+}
+nav ul{
+    background:#3F51B5;
+    margin-bottom:0.5em;
+    padding-left: 0.7em;
+    overflow:hidden;
+}
+nav a{
+    padding:0.3em;
+    float: left;
+    transition: background 0.5s,color 0.5s;
+    /*display: inline-block;*/
+}
+nav a:hover{
+    color: white;
+    background-color: #F50057;
+}
+h2{
+    padding: 1em;
+    font-size: 1em;
+    color: white;
+    background-color: #7986CB;
+}
+#Top figure #Image{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#Top figcaption{
+    background-color: #C5CAE9;
+    color: #7990A3;
+    font-family: "Times New Roman","serif";
+    padding: 0.5em 1em 0.5em 1em;
+}
+#Top #Introduce{
+    padding: 0.5em 1em 1em 1em;
+    font-weight: bold;
+    font-family: "Times New Roman","serif";
+}
+#Top #Option{
+    padding: 0 1em 0.5em 0;
+    text-align: right;
+}
+#Bottom{
+    margin-bottom: 0;
+}
+#Bottom #Reviews{
+    padding: 0 1em 0.5em 1em ;
+}
+#Bottom #Reviews .review{
+    padding: 0.25em 0 0.25em 0;
+    font-family: "Times New Roman", "serif";
+    font-weight: bold;
+}
+#Bottom #Reviews address{
+     margin-top: 0.25em;
+     padding: 0.25em 0 0.25em 0;
+     font-family: "Times New Roman", "serif";
+     color: #C5CAE9;
+ }
+#Bottom #Reviews address time{
+    color: #F5A2C1;
+}
+hr{
+    border-left-width: 0;
+    border-right-width: 0;
+}
+footer{
+    margin-top: 0.5em;
+    background-color: #1A237E;
+    color: white;
+    padding: 1em 1em 1em 1em;
+    font-size: 1em;
+}
+footer #Link,#Copyright{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+footer #Copyright{
+    font-style: italic;
+}
+img{
+    vertical-align: bottom;
+}
+a{
+    color: #00B0FF;
+}

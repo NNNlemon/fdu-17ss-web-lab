@@ -57,6 +57,7 @@ nav a:hover{
     background-color: #F50057;
 }
 h2{
+    text-transform: uppercase;
     padding: 1em;
     font-size: 1em;
     color: white;

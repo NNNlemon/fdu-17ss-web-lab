@@ -50,7 +50,6 @@ nav ul{
 nav a{
     padding:0.3em;
     float: left;
-    transition: background 0.5s,color 0.5s;
     /*display: inline-block;*/
 }
 nav a:hover{

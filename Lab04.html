@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head >
+<head>
    <meta charset="utf-8">
    <title>Lab 04</title>
    <link rel="stylesheet" href="./css/reset.css" />
@@ -19,16 +19,21 @@
            <table>
                <tr>
                    <td colspan="2">
-                       <label>Title</label><br>
-                       <input type="text" placeholder="Give your photo a descriptive name"><br>
-                       <label>Description</label><br>
-                       <textarea placeholder="Adding a rich description will help with search results"></textarea><br>
+                       <p>
+                           <label>Title</label><br>
+                           <input name="title" type="text" placeholder="Give your photo a descriptive name"><br>
+                       </p>
+                       <p>
+                           <label>Description</label><br>
+                           <textarea rows="5" placeholder="Adding a rich description will help with search results"></textarea><br>
+                       </p>
                    </td>
                </tr>
                <tr>
                    <td>
-                       <label>Continent</label><br>
-                       <select>
+                       <p>
+                       <label for="continent">Continent</label><br>
+                       <select id="continent">
                            <option>Choose continent</option>
                            <option value="Asia">Asia</option>
                            <option value="Africa">Africa</option>
@@ -38,16 +43,73 @@
                            <option value="Europe">Europe</option>
                            <option value="Australia">Australia</option>
                        </select><br>
-                       <label>Country</label><br>
-                       <select>
+                       </p>
+                       <p>
+                       <label for="country">Country</label><br>
+                       <select id="country">
                            <option>Choose country</option>
                            <option>China</option>
                            <option>China</option>
+                           <option>China</option>
+                           <option>China</option>
                        </select><br>
-                       <label>City</label><br>
-                       <input type="text"><br>
+                       </p>
+                       <p>
+                       <label for="city">City</label><br>
+                       <input id="city" name="city" type="text"><br>
+                       </p>
                    </td>
                    <td>
+                       <div class="box">
+                           Copyright?<br>
+                           <label><input type="radio" name="copyright">All rights reserved</label><br>
+                           <label><input type="radio" name="copyright" checked>Creative Commons</label><br>
+                       </div>
+                       <div class="box">
+                           Creative Commons Types<br>
+                           <label><input type="checkbox">Attribution</label><br>
+                           <label><input type="checkbox">Noncommercial</label><br>
+                           <label><input type="checkbox">No Derivative Work</label>s<br>
+                       </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td colspan="2">
+                       <div class="rectangle">
+                          <label class="rectangle">I accept the software license<input type="checkbox"></label>
+                       </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <p>
+                           <label for="rate">Rate this photo:</label><br>
+                           <input id="rate" type="number" aria-colspan="4"><br>
+                       </p>
+                       <p>
+                           <label for="color">Color Collection:</label><br>
+                           <input id="color" type="color"><br>
+                       </p>
+                   </td>
+                   <td>
+                       <div class="box">
+                           <p>
+                               <label for="date">Date Taken:</label><br>
+                               <input id="date" type="date"><br>
+                           </p>
+                           <p>
+                               <label for="time">Time Taken:</label><br>
+                               <input id="time" type="time"><br>
+                           </p>
+                       </div>
+                   </td>
+               </tr>
+               <tr>
+                   <td colspan="2">
+                       <div class="rectangle">
+                           <button class="rounded">提交</button>
+                           <button class="rounded">Clear Form</button>
+                       </div>
                    </td>
                </tr>
            </table>

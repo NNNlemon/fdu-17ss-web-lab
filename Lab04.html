@@ -13,7 +13,7 @@
 </header>
 <main>
    <section>
-   <form>
+   <form method="post" action="http://www.randyconnolly.com/tests/process.php">
        <fieldset>
            <legend>photo details</legend>
            <table>
@@ -84,7 +84,7 @@
                    <td>
                        <p>
                            <label for="rate">Rate this photo:</label><br>
-                           <input id="rate" type="number" aria-colspan="4"><br>
+                           <input id="rate" type="number"><br>
                        </p>
                        <p>
                            <label for="color">Color Collection:</label><br>
@@ -107,8 +107,8 @@
                <tr>
                    <td colspan="2">
                        <div class="rectangle">
-                           <button class="rounded">提交</button>
-                           <button class="rounded">Clear Form</button>
+                           <input type="submit" value="提交" class="rounded">
+                           <input type="reset" value="Clear Form" class="rounded">
                        </div>
                    </td>
                </tr>

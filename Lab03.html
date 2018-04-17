@@ -3,12 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" charset="utf-8">
     <title>Lab 03</title>
-    <!--<link rel="stylesheet" href="bootstrap-4.1.0-dist/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="bootstrap-4.1.0-dist/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-    <!--<script type="text/javascript" src="bootstrap-4.1.0-dist/js/bootstrap.min.js"></script>-->
     <style>
         /* Make the image fully responsive */
         .carousel-inner img {
@@ -24,7 +22,7 @@
                 <h1>Share Your Travels</h1>
                 <p class="font-italic">Let us know where you've been</p>
             </div>
-            <ul class="col-md-6 navbar-nav justify content-end nav-fill col-md-offset-1">
+            <ul class="col-md-6 navbar-nav content-end justify nav-fill col-md-offset-1">
                     <li class="nav-item">
                         <a class="nav-link" href="Lab04.html">Upload</a>
                     </li>
@@ -41,82 +39,82 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-md-9 border rounded p-3">
+        <div class="col-md-9 border rounded p-3">
         <h2>New York-Central Park</h2>
         <p>Conservatory Pond in Central Park</p>
         <a href="images/large-central-park.jpg"><img class="img-fluid" src="images/large-central-park.jpg"></a>
         <p>This photo of Conservatory Pond in Central Park in New York City was taken on October 22,2016 with a Cannon
            EOS 3000 camera</p>
-        <div class="text-right">
-            <img src="images/icon_download.png" alt="download">
-            <img src="images/icon_mail.png" alt="mail">
-            <img src="images/icon_map.png" alt="map">
-            <img src="images/icon_up.png" alt="up">
-            <img src="images/icon_down.png" alt="down">
+        <div class="btn-group float-right">
+            <button type="button" class="btn btn-outline-light text-dark">
+                <img src="images/icon_download.png" alt="download">
+            </button>
+            <button type="button" class="btn btn-outline-light text-dark">
+                <img src="images/icon_mail.png" alt="mail">
+            </button>
+            <button type="button"  class="btn btn-outline-light text-dark">
+                <img src="images/icon_map.png" alt="map">
+            </button>
+            <button type="button"  class="btn btn-outline-light text-dark">
+                <img src="images/icon_up.png" alt="up">
+            </button>
+            <button type="button"  class="btn btn-outline-light text-dark">
+                <img src="images/icon_down.png" alt="down">
+            </button>
         </div>
     </div>
-<div class="col-md-3">
-
-    <div class="border rounded p-3">
-        <h2>Related Photos</h2>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- 指示符 -->
-        <ul class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ul>
-
-        <!-- 轮播图片 -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="images/related-large1.jpg"><img class="img-fluid" src="images/related-square1.jpg"></a>
-            </div>
-            <div class="carousel-item">
-                <a href="images/related-large2.jpg"><img class="img-fluid" src="images/related-square2.jpg"></a>
-            </div>
-            <div class="carousel-item">
-                <a href="images/related-large3.jpg"><img class="img-fluid" src="images/related-square3.jpg"></a>
-            </div>
-        </div>
-
-        <!-- 左右切换按钮 -->
-        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-        </div>
-    </div>
-
-    <div class="border rounded p-3">
-        <h2>Reviews</h2>
-        <div class="text-center font-italic">
-            <div class="btn btn-outline-light text-dark" data-toggle="collapse" data-target="#review1">
-                <div>
-                    <p>Ricardo</p>
-                    <p class="badge-primary badge badge-pill">2016-05-23</p>
+        <div class="col-md-3">
+            <div class="border rounded p-3">
+            <h2>Related Photos</h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- 指示符 -->
+            <ul class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ul>
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="images/related-large1.jpg"><img class="img-fluid" src="images/related-square1.jpg"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="images/related-large2.jpg"><img class="img-fluid" src="images/related-square2.jpg"></a>
+                </div>
+                <div class="carousel-item">
+                    <a href="images/related-large3.jpg"><img class="img-fluid" src="images/related-square3.jpg"></a>
                 </div>
             </div>
-            <div id="review1" class="collapse text-center">Easy on the HDR buddy.</div><hr>
-
-            <div class="btn btn-outline-light text-dark" data-toggle="collapse" data-target="#review2">
-               <div>
-                   <p>Susan</p>
-                   <p class="badge-primary badge badge-pill">2016-11-18</p>
-               </div>
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
             </div>
-            <div id="review2" class="collapse text-center">I love Central Park.</div>
+            <div class="border rounded p-3">
+                <h2>Reviews</h2>
+                <div class="text-center">
+                    <button type="button" class="btn btn-outline-light text-dark font-italic">
+                        <div data-toggle="collapse" data-target="#review1">Ricardo</div>
+                        <div class="badge-primary badge badge-pill" data-toggle="collapse" data-target="#review1">2016-05-23</div>
+                        <div id="review1" class="collapse">Easy on the HDR buddy.</div>
+                    </button><hr>
+                    <button type="button" class="btn btn-outline-light text-dark font-italic">
+                    <div data-toggle="collapse" data-target="#review2">Susan</div>
+                    <div class="badge-primary badge badge-pill" data-toggle="collapse" data-target="#review2">2016-11-18</div>
+                    <div id="review2" class="collapse">I love Central Park.</div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
-</div>
 </div>
 
 
 <footer class="container">
-
     <nav class="navbar justify-content-center navbar-expand-md row ">
         <ul class="navbar-nav col-md-6 nav-fill">
             <li class="nav-item">
@@ -131,7 +129,7 @@
         </ul>
     </nav>
     <p class="font-italic text-center">Copyright &copy 2017 Share Your Travels</p>
-
 </footer>
+
 </body>
 </html>

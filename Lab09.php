@@ -41,7 +41,20 @@ include 'travel-data.inc.php';
               /* you will need to fill this place with appropriate PHP */
               /* hint: use array and loop */
               //the next line is an example
-              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a> 
+              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a>
+              include("travel-data.inc.php");
+              sort($countries);
+
+              foreach ($countries as $country){
+                  echo buttonLink($country);
+              }
+
+              function buttonLink($country){
+                  $button = '<a href="list.php?country=' . $country . '" ';
+                  $button .= 'role="button" class="btn btn-default">';
+                  $button .= $country . '</a>';
+                  return $button;
+              }
 
 
               ?>
@@ -57,9 +70,22 @@ include 'travel-data.inc.php';
           /* hint: use array and loop */
           //the next lines are one of the elements
           //you need to fill the elements with data provided
+          include("travel-data.inc.php");
+
+          foreach ($images as $image){
+              echo imgLink($image);
+          }
+
+          function imgLink($image){
+              $img = '<li><a href="detail.php?id=' . $image['id'] . '" class = "img-responsive">';
+              $img .= '<img src="images/square/' . $image['path'] . '" alt="View of Cologne">';
+              $img .= '<div class="caption"><div class="blur"></div><div class="caption-text"><h1>' . $image['title'];
+              $img .= '</h1></div></div></a></li>';
+              return $img;
+          }
 
 
-   //        <li>
+          //        <li>
    //              <a href="detail.php?id=22" class="img-responsive">
    //              	<img src="images/square/6114850721.jpg" alt="View of Cologne">
    //              	<div class="caption">

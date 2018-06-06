@@ -1,6 +1,9 @@
 <?php
 //Fill this place
-
+$db = new mysqli("localhost","root","","travel");
+if($db ->connect_error){
+    die("连接失败！" . $db ->conect_error);
+}
 //****** Hint ******
 //connect database and fetch data here
 
@@ -43,6 +46,8 @@
                 <option value="0">Select Continent</option>
                 <?php
                 //Fill this place
+                $sql = "SELECT continents.ContinentCode, continents.ContinentName FROM continents";
+                $result = $db ->query($sql);
 
                 //****** Hint ******
                 //display the list of continents
@@ -58,6 +63,12 @@
                 <option value="0">Select Country</option>
                 <?php 
                 //Fill this place
+                $sql = "SELECT countries.ISO, countries.CountryName FROM countries";
+                $result = $db ->query($sql);
+
+                while($row = $result->fetch_assoc()) {
+                    echo '<option value=' . $row['ISO'] . '>' . $row['CountryName'] . '</option>';
+                }
 
                 //****** Hint ******
                 /* display list of countries */ 
@@ -75,6 +86,56 @@
 		<ul class="caption-style-2">
             <?php 
             //Fill this place
+            if(isset($_GET["country"])){
+                $country = $_GET["country"];
+            }else{
+                $country = "";
+            }
+            if ($country == "" || $country == "0") {
+                    $inputCountry = "1";
+            } else {
+                $inputCountry = "CountryCodeISO = '" . $country . "'";
+            }
+
+
+            if(isset($_GET["continent"])){
+                $continent = $_GET["continent"];
+            }else{
+                $continent = "";
+            }
+            if ($continent == "" || $continent == "0") {
+                $inputContinent = "1";
+            } else {
+                $inputContinent = "ContinentCode = '" . $continent . "'";
+            }
+
+            
+            if(isset($_GET["title"])){
+                $title = $_GET["title"];
+            }else{
+                $title = "";
+            }
+            if ($title == "" || $title == "0") {
+                $inputTitle = "1";
+            } else {
+                $inputTitle = "Title = '" . $title . "'";
+            }
+
+            $sql = "SELECT imagedetails.ImageID,imagedetails.Path,imagedetails.Title FROM imagedetails WHERE $inputTitle AND $inputCountry AND $inputContinent";
+            $result = $db ->query($sql);
+
+            while ($row = $result->fetch_assoc()){
+                echo imgLink($row);
+            }
+
+            function imgLink($image){
+                $img = '<li><a href="detail.php?id=' . $image['ImageID'] . '" class = "img-responsive">';
+                $img .= '<img src="images/square-medium/' . $image['Path'] . '" alt=' . $image['Title'] . '">';
+                $img .= '<div class="caption"><div class="blur"></div><div class="caption-text"><p>' . $image['Title'];
+                $img .= '</p></div></div></a></li>';
+                return $img;
+            }
+
 
             //****** Hint ******
             /* use while loop to display images that meet requirements ... sample below ... replace ???? with field data

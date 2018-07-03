@@ -78,11 +78,15 @@ include 'travel-data.inc.php';
 
           function imgLink($image){
               $img = '<li><a href="detail.php?id=' . $image['id'] . '" class = "img-responsive">';
+<<<<<<< HEAD
 
               $img .= '<img src="images/square/' . $image['path'] . '" alt="' . $image['title'] . '">';
 
               $img .= '<img src="images/square/' . $image['path'] . '" alt=' . $image['title'] . '">';
 
+=======
+              $img .= '<img src="images/square/' . $image['path'] . '" alt=' . $image['title'] . '">';
+>>>>>>> 353674444f2234478ca931a5f8bbda5ded4f6eb4
               $img .= '<div class="caption"><div class="blur"></div><div class="caption-text"><h1>' . $image['title'];
               $img .= '</h1></div></div></a></li>';
               return $img;
